@@ -1,0 +1,90 @@
+<script language="javascript" type="text/javascript"> 
+    function pregunta()
+    {
+
+        if(confirm('¿Seguro desea eliminar la usuario?'))
+            {
+            return true;
+        }
+        else
+            {
+            return false;
+        }
+    }
+
+</script>   
+<div id="wrapper">
+    <div id="content">
+        <div id="cuerpoiconos">   
+        <div id="btnVolver"><a href="../php/bo_admin.php">Volver </a></div>                    
+
+<form method="post" >
+    <table border="0" style="margin-left: 19px;">
+        <tr>
+            <td>Rut :</td>
+            <td><input type="text" id="rut" name="rut"/></td>
+        </tr>
+        <tr>
+            <td>Nombre :</td>
+            <td><input type="text" id="nombre" name="nombre"/></td>
+        </tr>
+        <tr>
+            <td>Apellido :</td>
+            <td><input type="text" id="apellidos" name="apellidos"/></td> 
+        </tr>
+        <tr>
+            <td>Usuario:</td>
+            <td><input type="text" id="login" name="login"/> </td>
+        </tr>
+        <tr>
+            <td>Clave :</td>
+            <td><input type="password" id="clave" name="clave"/> </td>
+        </tr>
+        <tr>
+            <td>Tipo Usuario :</td>
+            <td>
+                <select name="tipousuario">
+                    <option value="1">Administrador</option>
+                    <option value="2">Encargado Contenido</option>
+                    <option value="3">Piscina</option>
+                    <option value="4">Casino</option>  
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="submit" id="registrar" name="registrar" value="Registrar"/></td>
+        </tr>
+        <!-- $BeginBlock Mensaje -->
+        <div id="mensaje">${mensaje}</div>
+        <!-- $EndBlock Mensaje -->     
+    </table>
+    <div class="noticiasLista">
+
+        <table width="940" >
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Rut</th>
+                <th>Usuario</th>
+                <th>Tipo de Usuario</th>    
+                <th>Edición</th>  
+            </tr>
+            <!-- $BeginBlock Usuario -->
+            <tr>
+                <td>${nombre}</td>
+                <td>${apellido}</td>
+                <td>${rut}</td>
+                <td>${usuario}</td>
+                <td>${tusuario}</td> 
+                <td><input type="text" value="${id}" name="id" style="display: none;"><input type="submit" class="btnEditar" value="" name="btnEditar"><br/><input type="submit" class="btnBorrar" value="" name="btnBorrar" onclick=" return pregunta()"></td> 
+
+            </tr>
+            <!-- $EndBlock Usuario -->   
+        </table> 
+
+    </div>   
+
+
+
+</form>
+</div></div></div>

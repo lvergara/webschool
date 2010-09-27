@@ -1,0 +1,67 @@
+/* Galeria destacados*/
+
+/*--Main Container--*/
+.main_view {
+    float:right;
+    margin-right:42px;
+    margin-top:5px;
+    position:relative;
+}
+/*--Window/Masking Styles--*/
+.window {
+height:270px; width: 478px;
+overflow: hidden; /*--Hides anything outside of the set width/height--*/
+position: relative;
+}
+.image_reel {
+position: absolute;
+top: 0; left: 0;
+
+
+}
+.image_reel img {
+float: left;
+margin-right: 5px;
+}
+.image_reel a img{
+    border:0px #fff;
+}
+
+
+
+
+/*--Paging Styles--*/
+element.style {
+display:block;
+}
+.paging {
+    background:url("url-imagen") no-repeat scroll 0 0 transparent;
+    bottom:40px;
+    display:none;
+    height:47px;
+    line-height:40px;
+    position:absolute;
+    right:-24px;
+    text-align:center;
+    top:-5px;
+    width:178px;
+    z-index:100;
+}
+.paging a {
+    padding: 5px;
+    text-decoration: none;
+    color: #fff;
+    background: #000;
+}
+.paging a.active {
+    font-weight: bold;
+    background: #920000;
+   /* border: 1px solid #610000;
+    -moz-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    -webkit-border-radius: 3px; */
+
+    }
+.paging a:hover {
+font-weight: bold;
+}

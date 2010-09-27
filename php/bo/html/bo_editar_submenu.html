@@ -1,0 +1,46 @@
+<div id="wrapper">
+    <div id="content">
+        <div id="cuerpoiconos">   
+         <div id="btnVolver"><a href="../php/bo_menu.php">Volver </a></div>                                  
+            <div class="titulo">Editar SubMenú</div>                      
+            <div id="formSubmenu">
+                <form action="" method="post" name="form1"> 
+                <table width="200" border="0" >
+                    <tr>
+                        <td><b>Insertar Submenu</b></td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Nombre  <input type="text" name="id" value="${id}" style="display: none;"/> <input type="text" name="idMenu" value="${idMenu}" style="display: none;"/>  </td>
+                        <td><label>
+                                <!-- $BeginBlock SubMenu -->
+                                <input type="text" name="nombre" value="${submenu}"/>
+
+                            </label></td>
+                    </tr>
+                    <tr>
+                        <td>Enlace a Pagina</td>
+                        <td><label>
+                                <select name="enlace" id="asda">
+                                    <!-- $BeginBlock Paginas -->
+                                    <option value="${idPagina}">${pagina}</option>
+                                    <!-- $EndBlock Paginas -->
+                                </select>
+                            </label></td>
+                        <!-- $EndBlock SubMenu -->     
+                    </tr>      
+                    <tr>
+                        <td><label>
+                                <input type="submit" name="btnSubMenu" value="Editar Submenu" />
+                            </label></td>
+                        <td>&nbsp;</td>
+                        <!-- $BeginBlock Mensaje -->
+                        <div id="mensaje">${mensaje}</div>
+                        <!-- $EndBlock Mensaje -->     
+                    </tr>
+                </table>
+                </form>
+            </div>    
+        </div>
+    </div>
+    </div>

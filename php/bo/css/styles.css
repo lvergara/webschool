@@ -1,0 +1,235 @@
+/* Estilo Backoffice*/
+
+html,body{
+    margin:0;
+    padding:0;
+}
+body{
+    font: 76% arial,sans-serif;
+    text-align:center;
+    background-color: #000;
+}
+p{
+    margin:0 10px 10px
+}
+a{
+    padding:0px; 
+    text-decoration:none;
+    color:#fff;
+}
+div#header{
+    background-color:#2874CD;
+    color:#fff;
+    height: 80px; 
+
+
+}
+#header .headerTitulo{
+    width: 200px;
+    padding-left:10px;
+    display: inline;
+    font-size: 18pt;
+    padding-top: 10px;
+    height: 80px; 
+
+}
+#header .User{
+    float: right;
+    display: inline;
+    margin-right: 20px;
+
+}
+#header .User a{
+    color:white;
+
+}
+div#container{
+    text-align:left;
+    background-color: white;  
+    width: 960px;     
+}
+div#content p{
+    line-height:1.4;
+
+}
+#content #cuerpoiconos{
+    width: 548px;
+    height: auto;
+
+}
+#content #cuerpoiconos img{
+    border: 0px;
+
+}
+#editor{
+    margin-left:19px;
+    margin-top:25px;
+
+
+}
+#editor th{
+    color:black;
+    font-weight: bold;
+
+
+}
+#content #cuerpoiconos #btnVolver{
+    margin-bottom: 5px;
+    width: 100%;
+    margin-left: 19px;
+
+}
+#content #cuerpoiconos #btnVolver a{
+    color:blue;
+    font-size: 16px;
+    text-decoration: underline;
+
+}
+
+#content #cuerpoiconos #formSubmenu{
+    margin-left: 20px;
+
+}
+
+
+#content #cuerpoiconos .menuLista{
+    margin-left: 20px;
+
+}
+#content #cuerpoiconos .menuLista a{
+    color:#000;
+
+}
+
+
+#content #cuerpoiconos .subdest{
+    margin: 0 0 0 20px;
+
+}
+#content #cuerpoiconos #btnAgregar{
+    margin:10px 0 10px 200px;
+    padding-left:305px;
+}
+#content #cuerpoiconos #btnAgregar a{
+    color:black;
+    text-decoration: none;
+    border:0px;
+    font-weight: bold;
+}
+
+
+#content #cuerpoiconos .noticiasLista{
+    margin-left: 10px;     
+
+}
+
+#content #cuerpoiconos .noticiasLista .btnEditar{
+    background: url(../img/ic-ficha.gif) no-repeat;
+    background-color: none;
+    color: none;  
+    border:none; 
+    width: 16px;
+    height: 16px;
+
+
+}
+#content #cuerpoiconos .noticiasLista .btnBorrar{
+    background: url(../img/ic-x.gif) no-repeat;
+    background-color: none;
+    color: none;  
+    border:none;
+    width: 16px;
+    height: 16px;   
+
+}
+#content #cuerpoiconos .noticiasLista td{    
+    border: 2px groove #CD111B;
+    border-right: none;
+    border-bottom: none;
+    text-align: center; 
+    text-align:justify;
+}
+#content #cuerpoiconos .noticiasLista th{
+    background: #2874CD;     
+    color:#fff;
+    text-align: center;
+    font-weight: bold;
+
+}
+#content #cuerpoiconos .subdest #bntPortada{
+    margin-top:8px;
+    padding-left:332px;
+    width:301px;
+}
+#content #cuerpoiconos .subdest #bntEliminar{
+    padding-left:310px;
+    width:301px;
+}
+
+#cuerpoiconos .titulo{
+    margin: 10px 0 10px 20px;
+    font-size: 12pt;
+    font-weight: bold;
+
+}
+#cuerpoiconos #mensaje{
+    margin: 10px 0 10px 3px;
+    font-size: 12pt;
+    font-weight: bold;
+    color:#2874CD;
+
+}
+#cuerpoiconos #iconos{
+
+    padding-top: 10px;
+    margin:20px 0 5px 20px;
+    display: inline; 
+}
+
+div#navigation{
+    background:#F6F0E0;
+}
+div#navigation ul{
+    margin:15px 0;
+    padding:0; 
+    list-style-type:none;
+}
+div#navigation li{
+    margin-bottom:5px;
+}
+
+div#footer p{
+    margin:0;
+    padding:5px 10px;
+}
+div#container{
+    width:960px;
+    margin:0 auto;
+}
+div#wrapper{
+    float:left;
+    width:100%;
+}
+div#content{
+    margin-right: 300px;
+}
+div#navigation{
+    float:left;
+    width:150px;
+    margin-left:-150px;
+}
+#extra{
+    float:left;
+    width:150px;
+    height: 100%;
+    margin-left:-150px;
+    background-color: #C3C3C3;
+
+}
+div#footer{
+    clear:left;
+    width:100%;
+    background-color: #2874CD;
+    color:white;
+}
+

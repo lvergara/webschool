@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Fotos Colegio</title>
+<link rel="stylesheet" type="text/css" href="../../../css/galeria.css" />
+<link rel="stylesheet" type="text/css" href="../../../css/estilo.css" />      
+</head>
+<body>
+<br/>
+<div id="gallery">
+  <div id="imagearea">
+    <div id="image">
+      <a href="javascript:slideShow.nav(-1)" class="imgnav " id="previmg"></a>
+      <a href="javascript:slideShow.nav(1)" class="imgnav " id="nextimg"></a>
+    </div>
+  </div>
+  <div id="thumbwrapper">
+    <div id="thumbarea">
+      <ul id="thumbs">
+      <!-- $BeginBlock Thumbs -->
+        <li value="${id}"><img src="../../bo/upload/fotos/destacados/thumbs/${nombre}.jpg" width="179" height="100" alt="" /></li>
+      <!-- $Endblock Thumbs --> 
+        </ul>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+var imgid = 'image';
+var imgdir = '../../bo/upload/fotos/destacados/fullsize';
+var imgext = '.jpg';
+var thumbid = 'thumbs';
+var auto = true;
+var autodelay = 1;
+</script>
+<script type="text/javascript" src="../../../js/slide.js"></script>
+
+</body>
+</html>

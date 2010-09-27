@@ -1,0 +1,76 @@
+<script language="javascript" type="text/javascript"> 
+    function pregunta()
+    {
+
+        if(    
+        confirm('¿Seguro desea eliminar?'))
+            {
+            return true;
+        }
+        else
+            {
+            return false;
+        }
+    }
+
+    function cambiaChecked(){
+
+        if(document.form1.eliminaNoticia.checked=true){
+
+            document.form1.eliminaNoticia.click();  
+        }
+    }
+</script>
+
+<div id="wrapper">
+    <div id="content">
+        <div id="cuerpoiconos">
+            <div id="btnVolver"><a href="../php/bo_admin.php">Volver </a></div>     
+            <div class="titulo">Imagenes Colegio (672x375px)</div>
+            <div class="subdest">
+                <form action="" method="post" name="form1" enctype="multipart/form-data">
+                    <table width="200" border="0">
+                        <tr>
+                            <td>Cargar Imagen</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td><label>
+                                    <input type="file" name="file" />
+                                </label></td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td><label>
+                                    <input type="submit" name="submit" value="Subir Imagen" />
+                                </label></td>
+                            <td>&nbsp;</td>
+                            <!-- $BeginBlock Mensaje -->
+                            <div id="mensaje">${mensaje}</div>
+                            <!-- $EndBlock Mensaje -->     
+                        </tr>
+                    </table>
+                    <table align="center" style="margin:25px 0 ;">
+                    <tr>
+                    <td>Eliminar Seleccionados <input name="botonEliminar" type="submit"  id="botonEliminar" value="X" onclick="return pregunta()"  />  </td>
+                    <td>Colocar en Portada<input name="botonPortada" type="submit"  id="botonPortada" value="P"/></td>
+                    <td>Sacar de la Portada<input name="botonPortadaSacar" type="submit"  id="botonPortada" value="P"/></td>
+                    </tr>
+                    
+                    </table>
+                    
+                    <ul>  
+                        <!-- $BeginBlock Destacados-->
+                        <li style="display: inline;"><img src="${imagen}.jpg" alt=""></li>
+                        <li style="display: inline;"><input type="checkbox" name="aryEliminaNoticia[]" value="${id_destacado}" id="eliminaNoticia" onclick="cambiaChecked()"></li>
+                        <li style="display: ${mostrar};"><label>${msj}</label></li>  
+                        <!-- $EndBlock Destacados -->
+
+                    </ul> 
+
+
+                </form>          
+            </div>                                                                     
+        </div>
+    </div>
+</div>

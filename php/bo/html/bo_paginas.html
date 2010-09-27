@@ -1,0 +1,59 @@
+<script language="javascript" type="text/javascript"> 
+function pregunta()
+    {
+
+        if(    
+        confirm('¿Seguro desea eliminar?'))
+            {
+            return true;
+        }
+        else
+            {
+            return false;
+        }
+    }
+
+    function cambiaChecked(){
+
+        if(document.form1.eliminaNoticia.checked=true){
+
+            document.form1.eliminaNoticia.click();  
+        }
+    }
+</script>   
+<div id="wrapper">
+    <div id="content">
+        <div id="cuerpoiconos">     
+            <div id="btnVolver"><a href="../php/bo_admin.php">Volver </a></div>                      
+            <div class="titulo">Listado de Paginas</div>
+            <div id="btnAgregar">Ingresar<a href="bo_ingresarPagina.php">Pagina</a></div>
+
+            <div class="noticiasLista">
+                <form action="" method="post" name="form1">
+                   Eliminar Seleccionados <input name="botonEliminar" type="submit"  id="botonEliminar" value="X" onclick="return pregunta()"  />                                            
+                    <table width="940" >
+                        <tr>
+                            <th>Página</th>   
+                            <th>Título</th>
+                            <th>Bajada</th>
+                            <th>Cuerpo</th>
+                            <th>Imagen</th>  
+                            <th>Edición</th>  
+                        </tr>
+                        <!-- $BeginBlock Paginas -->
+                        <tr>
+                            <td>${pagina}</td>  
+                            <td>${titulo}</td>
+                            <td>${bajada}</td>
+                            <td>${cuerpo}</td>
+                            <td><img src="../../bo/upload/fotos/paginas/mini_${img}"></td>  
+                            <td><a href="bo_editarPagina.php?id=${id}"><img src="../img/ic-ficha.gif"></a><br/><input type="checkbox"  value="${id}" name="aryEliminaNoticia[]" onclick="cambiaChecked()"></td> 
+
+                        </tr>
+                        <!-- $EndBlock Paginas -->   
+                    </table> 
+                </form>                
+            </div>   
+        </div>
+    </div>
+    </div>

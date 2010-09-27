@@ -1,0 +1,87 @@
+<script language="javascript" type="text/javascript"> 
+    function pregunta()
+    {
+
+        if(    
+        confirm('¿Seguro desea eliminar el submenu'))
+            {
+            return true;
+        }
+        else
+            {
+            return false;
+        }
+    }
+
+</script>        
+<div id="wrapper">
+    <div id="content">
+        <div id="cuerpoiconos">    
+            <div id="btnVolver"><a href="../php/bo_menu.php">Volver </a></div>              
+            <!-- $BeginBlock Menu -->          
+            <div class="titulo">${nombreMenu}</div>    
+            <!-- $EndBlock Menu -->  
+
+
+            <div id="formSubmenu">
+                <form action="" method="post" name="form1">     
+                <table width="200" border="0" >
+                    <tr>
+                        <td><b>Insertar Submenu</b></td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <!-- $BeginBlock Id -->
+                      <input type="text" name="id" value="${id}" style="display: none;"/> 
+                       <!-- $EndBlock Id -->    
+                        <td>Nombre     </td>
+                       
+                        <td><label>
+                                <input type="text" name="nombre" />
+                            </label></td>
+                    </tr>  
+                    <tr>
+                        <td>Enlace a Pagina</td>
+                        <td><label>
+                                <select name="enlace" id="asda">
+                                    <!-- $BeginBlock Paginas -->
+                                    <option value="${idPagina}">${pagina}</option>    
+                                    <!-- $EndBlock Paginas -->
+                                </select>
+                            </label></td>
+                    </tr>      
+                    <tr>
+                        <td><label>
+                                <input type="submit" name="btnSubMenu" value="Ingresar Submenu" />
+                            </label></td>
+                        <td>&nbsp;</td>
+                        <!-- $BeginBlock Mensaje -->
+                        <div id="mensaje">${mensaje}</div>
+                        <!-- $EndBlock Mensaje -->     
+                    </tr>
+                </table>
+            </div>     
+            <br/>
+            <div class="titulo">Listado de Submenus</div>        
+            <div class="noticiasLista">      
+                <table width="780" >                                        
+                    <tr>
+                        <th>titulo</th>
+                        <th>pagina relacionada</th> 
+                        <th>edicion</th>                        
+
+                    </tr>   
+                    <!-- $BeginBlock SubMenu -->   
+                    <tr>   
+                        <td>${submenu}</td>
+                        <td>${pagina}</td>   
+                        <td><input type="text"  name="id" value="${idsubmenu}" style="display: none;"><a href="bo_editar_submenu.php?id=${idsubmenu}&idmenu=${idMenuSub}&submenu=${submenu}&enlace=${idPagina}"><img src="../img/ic-ficha.gif"></a><br/><input type="submit" class="btnBorrar" value="" name="btnBorrar" onclick=" return pregunta()"></td> 
+
+                        <!-- $EndBlock SubMenu -->    
+                    </tr>
+                </table> 
+                </form>                
+            </div>   
+        </div>
+    </div>
+    </div>

@@ -1,0 +1,59 @@
+<script language="javascript" type="text/javascript"> 
+    function pregunta()
+    {
+
+        if(    
+        confirm('¿Seguro desea eliminar?'))
+            {
+            return true;
+        }
+        else
+            {
+            return false;
+        }
+    }
+
+    function cambiaChecked(){
+
+        if(document.form1.eliminaNoticia.checked=true){
+
+            document.form1.eliminaNoticia.click();  
+        }
+    }
+</script>   
+<div id="wrapper">
+    <div id="content">
+        <div id="cuerpoiconos">  
+            <div id="btnVolver"><a href="../php/bo_admin.php">Volver </a></div>                          
+            <div class="titulo">Listado de Noticias</div>
+            <div id="btnAgregar">Ingresar<a href="bo_noticiasIngreso.php">Noticia</a></div>
+
+            <div class="noticiasLista">
+                <form action="" method="post" name="form1">
+                 Eliminar Seleccionados <input name="botonEliminar" type="submit"  id="botonEliminar" value="X" onclick="return pregunta()"  />     
+                    <table width="940" >
+                        <tr>
+                            <th>Título</th>
+                            <th>Bajada</th>
+                            <th>Cuerpo</th>
+                            <th>Fecha</th>
+                            <th>Imagen</th>  
+                            <th>Edición</th>  
+                        </tr>
+                        <!-- $BeginBlock Noticias -->
+                        <tr>
+                            <td>${titulo}</td>
+                            <td>${bajada}</td>
+                            <td>${cuerpo}</td> 
+                            <td>${fecha}</td>
+                            <td><img src="../upload/fotos/noticias/mini_${img}"></td>   
+                            <td><a href="bo_editarNoticia.php?id=${id}"><img src="../img/ic-ficha.gif"  style="margin-left:3px"></a><br/><input type="checkbox"  value="${id}" name="aryEliminaNoticia[]" onclick="cambiaChecked()"></td> 
+
+                        </tr>
+                        <!-- $EndBlock Noticias -->   
+                    </table> 
+                </form>                
+            </div>   
+        </div>
+    </div>
+    </div>

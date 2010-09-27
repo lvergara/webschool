@@ -1,0 +1,10 @@
+<?php
+  require_once("Clases.php");        
+  require_once("home_header.php");  
+  require_once("home_menu.php");
+  require_once("home_destacados.php");  
+  require_once("home_calendar.php");   
+  require_once("home_importantes.php"); 
+  require_once("home_noticias.php");  
+  require_once("home_footer.php");         
+?>
