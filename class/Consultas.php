@@ -27,7 +27,7 @@
         //Select Ultimas Noticias   
         public function selectUltimos($num){            
             $bd = new Conexion();
-            $this->sql = "SELECT * FROM $this->table ORDER BY fecha limit $num"; 
+            $this->sql = "SELECT * FROM $this->table ORDER BY idNoticia desc limit $num"; 
             $this->result = mysql_query($this->sql,$bd->conectarBD());                                                                     
             return $this->result;
         }  
